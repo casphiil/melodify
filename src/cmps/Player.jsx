@@ -55,8 +55,8 @@ export function Player() {
         muted={false}
         playing={play}
         className="react-player"
-        /* url="https://soundcloud.com/woodcampmusic/eatin-good" */
-        url="https://open.spotify.com/artist/4Z8W4fKeB5YxbusRsdQVPb"
+        url="https://soundcloud.com/woodcampmusic/eatin-good"
+        /* url="https://open.spotify.com/artist/4Z8W4fKeB5YxbusRsdQVPb" */
         width="100%"
         height="400px"
       />
