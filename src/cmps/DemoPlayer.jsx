@@ -208,6 +208,9 @@ class DemoPlayer extends Component {
               </button>
             </div>
             <div className="player-slider slider-wrapper">
+              <span className="track-time">
+                <Duration seconds={duration * played} />
+              </span>
               <input
                 type="range"
                 min={0}
@@ -219,6 +222,9 @@ class DemoPlayer extends Component {
                 onMouseUp={this.handleSeekMouseUp}
                 className="slider"
               ></input>
+              <span className="track-time">
+                <Duration seconds={duration * (1 - played)} />
+              </span>
             </div>
           </div>
           <div className="volume-section">

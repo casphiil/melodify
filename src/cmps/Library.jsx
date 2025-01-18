@@ -2,9 +2,6 @@ import SearchIcon from '../assets/svg/search-icon.svg?react'
 import CollapseIcon from '../assets/svg/collapse-icon.svg?react'
 import {ListItem} from '../cmps/ListItem.jsx'
 
-const CLIENT_ID = '40b36a0c0fe94731aba1993dfc4455b1'
-const CIENT_SECRET = '9e6861fdc66b4101b15c64cbc604db1a'
-
 const list = [
   {name: 'first artist name', title: 'first title', subtitle: 'first subtitle'},
   {name: 'second artist name', title: 'first title', subtitle: 'first subtitle'},
