@@ -1,5 +1,7 @@
 import SearchIcon from '../assets/svg/search-icon.svg?react'
 import CollapseIcon from '../assets/svg/collapse-icon.svg?react'
+import PlusIcon from '../assets/svg/plus-icon.svg?react'
+import Arrow1Icon from '../assets/svg/arrow-icon-1.svg?react'
 import {ListItem} from '../cmps/ListItem.jsx'
 
 const list = [
@@ -32,8 +34,13 @@ export function Library() {
             <CollapseIcon className="collapse-icon icon-empty" />
             <h4>Your Library</h4>
           </button>
-          <span>+</span>
-          <span>&#8594;</span>
+
+          <button className="library-header-icons">
+            <PlusIcon className="icon-empty" />
+          </button>
+          <button className="library-header-icons">
+            <Arrow1Icon className="icon-empty" />
+          </button>
         </div>
         <ul className="library-filter">
           <li>Playlist</li>

@@ -2,7 +2,7 @@ import {Header} from '../cmps/Header.jsx'
 import {Player} from '../cmps/Player.jsx'
 import {MainSection} from '../cmps/MainSection.jsx'
 import {Library} from '../cmps/Library.jsx'
-import DemoPlayer from '../cmps/DemoPlayer.jsx'
+/* import {DemoPlayer} from '../cmps/DemoPlayer.jsx' */
 
 export function HomePage() {
   return (
@@ -10,7 +10,7 @@ export function HomePage() {
       <Header />
       <Library />
       <MainSection />
-      <DemoPlayer />
+      <Player URL="https://youtu.be/Dck1ajndYdc?si=7Be0AbZqk39TKzgs" />
     </section>
   )
 }

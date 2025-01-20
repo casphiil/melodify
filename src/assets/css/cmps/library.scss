@@ -28,9 +28,17 @@
   justify-content: space-between;
   margin-bottom: 5px;
 }
+.library-header-icons {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+.library-header-icons * {
+  padding: 12px;
+}
 .collapse-wrapper {
   display: flex;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.3);
+
   align-items: center;
   background: none;
   border: none;
@@ -38,10 +46,14 @@
   border-radius: 5px;
 }
 .collapse-wrapper:hover {
-  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
 }
 .collapse-icon {
   padding-left: 0;
+  fill: rgba(255, 255, 255, 0.3);
+}
+.collapse-wrapper:hover .collapse-icon {
+  fill: #fff;
 }
 .library-list-wrapper {
   overflow-y: scroll;

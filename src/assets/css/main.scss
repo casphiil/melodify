@@ -2,11 +2,13 @@
 
 @use 'basics/base.scss';
 @use 'basics/helpers.scss';
+
 /* @use 'basics/layout.scss';
 @use 'basics/animations.scss'; */
 
 /* Setup */
 @use './setup/variables.scss';
+@use './setup/typography.scss';
 
 /* Pages */
 @use './pages/home.scss';
