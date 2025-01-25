@@ -60,10 +60,12 @@
   height: 100%;
   padding: var(--gap-1);
   padding-right: 0;
+  overflow-x: hidden;
 }
 .library-list {
   display: flex;
   flex-direction: column;
+  min-width: 500px;
 }
 .library-filter {
   display: flex;
@@ -111,9 +113,10 @@
 .list-item-img {
   height: var(--track-tab-1);
   width: var(--track-tab-1);
-  border-radius: 3px;
+  border-radius: 4px;
   background-color: var(--base-color-1);
   position: relative;
+  overflow: hidden;
 }
 .list-item-img::after {
   content: '';

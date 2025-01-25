@@ -11,7 +11,7 @@ export function MainSearch() {
       <span>
         <SearchIcon className="search-icon icon-empty" />
       </span>
-      <input type="text"></input>
+      <input id="main-search" type="text"></input>
       <span>
         <BrowseIcon className="browse-icon icon-empty" />
       </span>

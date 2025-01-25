@@ -1,31 +1,24 @@
+import {useState, useEffect} from 'react'
+
 import SearchIcon from '../assets/svg/search-icon.svg?react'
 import CollapseIcon from '../assets/svg/collapse-icon.svg?react'
 import PlusIcon from '../assets/svg/plus-icon.svg?react'
 import Arrow1Icon from '../assets/svg/arrow-icon-1.svg?react'
 import {ListItem} from '../cmps/ListItem.jsx'
+import {SpotifyAPI} from './SpotifyAPI.jsx'
+import {YoutubeAPI} from './YoutubeAPI.jsx'
 
-const list = [
-  {name: 'first artist name', title: 'first title', subtitle: 'first subtitle'},
-  {name: 'second artist name', title: 'first title', subtitle: 'first subtitle'},
-  {name: 'third artist name', title: 'first title', subtitle: 'first subtitle'},
-  {name: 'first artist name', title: 'first title', subtitle: 'first subtitle'},
-  {name: 'second artist name', title: 'first title', subtitle: 'first subtitle'},
-  {name: 'third artist name', title: 'first title', subtitle: 'first subtitle'},
-  {name: 'first artist name', title: 'first title', subtitle: 'first subtitle'},
-  {name: 'second artist name', title: 'first title', subtitle: 'first subtitle'},
-  {name: 'third artist name', title: 'first title', subtitle: 'first subtitle'},
-  {name: 'first artist name', title: 'first title', subtitle: 'first subtitle'},
-  {name: 'second artist name', title: 'first title', subtitle: 'first subtitle'},
-  {name: 'third artist name', title: 'first title', subtitle: 'first subtitle'},
-]
 export function Library() {
-  /* const listHtml='';
-  function loadList() {
-    return list.map(item => {
-      ;<ListItem />
-    })
+  const [term, setTerm] = useState('detective music')
+  const [count, setCount] = useState(0)
+
+  function handleClick(txt) {
+    /* setTerm(txt) */
+    console.log(txt)
   }
-  loadList() */
+
+  /* setTerm('ambient detective music') */
+
   return (
     <section className="library">
       <div className="library-header">
@@ -49,16 +42,11 @@ export function Library() {
         </ul>
       </div>
       <div className="library-list-wrapper">
-        <span>
+        <button onClick={() => setTerm('count + 1')}>
           <SearchIcon className="librarary-search-icon icon-empty" />
-        </span>
-        <ul className="library-list">
-          {list.map(item => (
-            <li key={`${item.name}''${list.indexOf(item)}`}>
-              <ListItem name={item.name} subtitle={item.subtitle} />
-            </li>
-          ))}
-        </ul>
+        </button>
+
+        {/* <SpotifyAPI searchTerm={term} /> */}
       </div>
     </section>
   )

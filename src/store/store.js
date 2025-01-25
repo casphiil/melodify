@@ -1,18 +1,13 @@
-
-import { combineReducers, compose, legacy_createStore as createStore } from 'redux'
-import { robotReducer } from './robot/robot.reducer'
-import { userReducer } from './user/user.reducer'
-import { appReducer } from './app/app.reducer'
+import {combineReducers, compose, legacy_createStore as createStore} from 'react-redux'
+import {playerReducer} from './player/rplayer.reducer.js'
 
 const rootReducer = combineReducers({
-    robotModule: robotReducer,
-    userModule: userReducer,
-    appModule: appReducer
+  playerModule: playerReducer,
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
-export const store = createStore(rootReducer, composeEnhancers())
+export const store = createStore(playerReducer, composeEnhancers())
 
 //* For debugging
 window.gStore = store

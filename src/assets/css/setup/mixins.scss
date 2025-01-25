@@ -1,0 +1,39 @@
+@use 'variables' as v;
+@use 'sass:map';
+
+// Flexbox mixins
+@mixin flex($direction: row, $justify: flex-start, $align: stretch, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Media queries
+@mixin breakpoint($size) {
+  $breakpoint: map.get(v.$breakpoints, $size);
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+// Typography
+@mixin text($size) {
+  font-size: map.get(v.$font-sizes, $size);
+}
+
+// Transitions
+@mixin smooth-transition($properties...) {
+  $transitions: ();
+  @each $property in $properties {
+    $transitions: append($transitions, $property 0.3s ease-in-out, comma);
+  }
+  transition: $transitions;
+}

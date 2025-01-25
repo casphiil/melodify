@@ -241,10 +241,10 @@ import {Duration} from '../services/duration.jsx'
 //   }
 // }
 
-const DemoPlayer = ({track}) => {
+const DemoPlayer = ({url}) => {
   const ref = useRef()
   const [playerAttributes, setPlayerAttributes] = useState({
-    url: track.url,
+    url: url,
     pip: false,
     playing: false,
     controls: false,
@@ -377,7 +377,7 @@ const DemoPlayer = ({track}) => {
           pip={pip}
           playing={playing}
           controls={controls}
-          light={light}
+          /* light={light}
           loop={loop}
           playbackRate={playbackRate}
           volume={volume}
@@ -395,7 +395,7 @@ const DemoPlayer = ({track}) => {
           onError={e => console.log('onError', e)}
           onProgress={this.handleProgress}
           onDuration={this.handleDuration}
-          onPlaybackQualityChange={e => console.log('onPlaybackQualityChange', e)}
+          onPlaybackQualityChange={e => console.log('onPlaybackQualityChange', e)} */
         />
 
         <div className="track-section">
@@ -409,7 +409,7 @@ const DemoPlayer = ({track}) => {
             <button>
               <PrevIcon />
             </button>
-            <button onClick={this.handlePlayPause} className={playing ? 'paused' : 'playing'}>
+            <button /* onClick={this.handlePlayPause} className={playing ? 'paused' : 'playing'} */>
               <PlayIcon className="play-btn" />
               <PauseIcon className="play-btn" />
             </button>
@@ -422,10 +422,10 @@ const DemoPlayer = ({track}) => {
           </div>
           <div className="player-slider slider-wrapper">
             <span className="track-time">
-              <Duration seconds={duration * played} />
+              <Duration /* seconds={duration * played}  */ />
             </span>
             <input
-              type="range"
+            /*  type="range"
               min={0}
               max={0.999999}
               step="any"
@@ -433,19 +433,19 @@ const DemoPlayer = ({track}) => {
               onMouseDown={this.handleSeekMouseDown}
               onChange={this.handleSeekChange}
               onMouseUp={this.handleSeekMouseUp}
-              className="slider"
+              className="slider" */
             ></input>
             <span className="track-time">
-              <Duration seconds={duration * (1 - played)} />
+              <Duration /* seconds={duration * (1 - played)}  */ />
             </span>
           </div>
         </div>
         <div className="volume-section">
-          <button onClick={this.handleToggleMuted} className={muted ? 'muted' : ''}>
+          <button /* onClick={this.handleToggleMuted} className={muted ? 'muted' : ''} */>
             <VolumeIcon className="volume-icon" />
           </button>
           <div className="volume-slider slider-wrapper">
-            <input type="range" min={0} max={1} step="any" value={volume} onChange={this.handleVolumeChange} className="slider"></input>
+            <input type="range" /* min={0} max={1} step="any" value={volume} onChange={this.handleVolumeChange} */ className="slider"></input>
           </div>
         </div>
       </section>

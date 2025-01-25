@@ -1,5 +1,5 @@
 /*  Basics */
-
+@use 'basics/reset.scss';
 @use 'basics/base.scss';
 @use 'basics/helpers.scss';
 
@@ -7,19 +7,20 @@
 @use 'basics/animations.scss'; */
 
 /* Setup */
-@use './setup/variables.scss';
-@use './setup/typography.scss';
+@use './setup/variables' as v;
+@use './setup/fonts';
+@use './setup/mixins' as m;
 
 /* Pages */
-@use './pages/home.scss';
+@use './pages/home';
 
 /* Components */
-@use './cmps/header.scss';
-@use './cmps/library.scss';
-@use './cmps/main-search.scss';
-@use './cmps/main-section.scss';
-@use './cmps/player.scss';
-
+@use './cmps/header';
+@use './cmps/library';
+@use './cmps/main-search';
+@use './cmps/main-section';
+@use './cmps/player';
+@use 'basics/test.css';
 .bottom-div {
   height: 0px;
   width: 100vw;

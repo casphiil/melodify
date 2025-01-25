@@ -8,10 +8,12 @@ const list = [
   {name: 'third artist name', title: 'first title', subtitle: 'first subtitle'},
 ]
 
-export function ListItem({name = 'name', subtitle = 'subtitle'}) {
+export function ListItem({name = 'name', subtitle = 'subtitle', imgUrl = ''}) {
   return (
     <section className="list-item">
-      <div className="list-item-img"></div>
+      <div className="list-item-img">
+        <img src={imgUrl}></img>
+      </div>
       <span>
         <p className="item-title ">{name}</p>
         <p className="item-subtitle ">{subtitle}</p>
